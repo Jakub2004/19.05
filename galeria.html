@@ -30,7 +30,7 @@
         </table>
     </section>
     <section class="prawy">
-        <button onclick="">prev</button>
+        <button onclick="prev()">prev</button>
         <img src="1.jpg" alt="galeria1" class="duzy" id="duzy">
         <button onclick="dalej()">next</button>
         <hr>
@@ -65,7 +65,39 @@
         function dalej(){
             dane=document.getElementById("duzy").alt;
             if(dane=="galeria1"){
-                document.getElementById("duzy").src="2.jpg";
+                document.getElementById("duzy").src="2.jpg"
+                document.getElementById("duzy").alt="galeria2";
+            }
+            if(dane=="galeria2"){
+                document.getElementById("duzy").src="3.jpg"
+                document.getElementById("duzy").alt="galeria3";
+            }
+            if(dane=="galeria3"){
+                document.getElementById("duzy").src="4.jpg"
+                document.getElementById("duzy").alt="galeria4";
+            }
+            if(dane=="galeria4"){
+                document.getElementById("duzy").src="5.jpg"
+                document.getElementById("duzy").alt="galeria5";
+            }
+        }
+        function prev(){
+            dane=document.getElementById("duzy").alt;
+            if(dane=="galeria5"){
+                document.getElementById("duzy").src="4.jpg"
+                document.getElementById("duzy").alt="galeria4";
+            }
+            if(dane=="galeria4"){
+                document.getElementById("duzy").src="3.jpg"
+                document.getElementById("duzy").alt="galeria3";
+            }
+            if(dane=="galeria3"){
+                document.getElementById("duzy").src="2.jpg"
+                document.getElementById("duzy").alt="galeria2";
+            }
+            if(dane=="galeria2"){
+                document.getElementById("duzy").src="1.jpg"
+                document.getElementById("duzy").alt="galeria1";
             }
         }
     </script>
